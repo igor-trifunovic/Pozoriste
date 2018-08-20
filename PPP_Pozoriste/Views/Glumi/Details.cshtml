@@ -1,0 +1,35 @@
+﻿@model PPP_Pozoriste.Models.Glumi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Glumi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Glumac.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Glumac.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Predstava.NazivPredstave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predstava.NazivPredstave)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GlumiID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

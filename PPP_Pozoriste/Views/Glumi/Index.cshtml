@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PPP_Pozoriste.Models.Glumi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Glumac.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Predstava.NazivPredstave)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Glumac.Ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Predstava.NazivPredstave)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GlumiID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GlumiID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GlumiID })
+        </td>
+    </tr>
+}
+
+</table>
