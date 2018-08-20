@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<PPP_Pozoriste.Models.Glumi>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Lista dodljenih glumaca i predstava</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Dodeli glumca predstavi", "Create")
 </p>
 <table class="table">
     <tr>
@@ -30,9 +30,9 @@
             @Html.DisplayFor(modelItem => item.Predstava.NazivPredstave)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GlumiID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GlumiID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GlumiID })
+            @Html.ActionLink("Izmeni", "Edit", new { id=item.GlumiID }) |
+            @Html.ActionLink("Detalji", "Details", new { id=item.GlumiID }) |
+            @Html.ActionLink("Obrisi", "Delete", new { id=item.GlumiID })
         </td>
     </tr>
 }

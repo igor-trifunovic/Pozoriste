@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PPP_Pozoriste.Models.Predstava>
+
+@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista predstava</h2>
+
+<p>
+    @Html.ActionLink("Kreiraj novu predstavu", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NazivPredstave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zanr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duzina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Scenarista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reditelj)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NazivPredstave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zanr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duzina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Scenarista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reditelj)
+        </td>
+        <td>
+            @Html.ActionLink("Izmeni", "Edit", new { id=item.PredstavaID }) |
+            @Html.ActionLink("Detalji", "Details", new { id=item.PredstavaID }) |
+            @Html.ActionLink("Obriši", "Delete", new { id=item.PredstavaID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PPP_Pozoriste.Models.Repertoar>
+
+@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista repertoara za mesec</h2>
+
+<p>
+    @Html.ActionLink("Dodaj novi", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mesec.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StavkaRepertoara.StavkaID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mesec.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StavkaRepertoara.StavkaID)
+        </td>
+        <td>
+            @Html.ActionLink("Izmeni", "Edit", new { id=item.RepertoarID }) |
+            @Html.ActionLink("Detalji", "Details", new { id=item.RepertoarID }) |
+            @Html.ActionLink("Obriši", "Delete", new { id=item.RepertoarID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Početna Stranica</title>
+    <title>@ViewBag.Title - Pozorište</title>
     @Scripts.Render("~/bundles/jquery")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/bootstrap")
@@ -22,10 +22,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Glumci", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Predstave", "About", "Home")</li>
-                    <li>@Html.ActionLink("Repertoar", "Contact", "Home")</li>
-                    
+                    <li>@Html.ActionLink("Predstave", "Index", "Predstava")</li>
+                    <li>@Html.ActionLink("Mesečni repertoar", "Index", "Repertoar")</li>
+                    <li>@Html.ActionLink("Stavke repertoara", "Index", "StavkaRepertoara")</li>
+                    <li>@Html.ActionLink("Dodeli glumca", "Index", "Glumi")</li>
                 </ul>
             </div>
         </div>
@@ -34,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Pozorište</p>
+            <p>&copy; @DateTime.Now.Year Sva prava zadržana - Pozorište</p>
         </footer>
     </div>
 

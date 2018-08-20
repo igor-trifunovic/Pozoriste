@@ -1,0 +1,52 @@
+﻿@model PPP_Pozoriste.Models.Repertoar
+
+@{
+    ViewBag.Title = "Detalji";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <h4>Podaci o repertoaru za mesec</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mesec.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mesec.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StavkaRepertoara.StavkaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StavkaRepertoara.StavkaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StavkaRepertoara.Predstava.NazivPredstave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StavkaRepertoara.Predstava.NazivPredstave)
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StavkaRepertoara.DatumPrikazivanja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StavkaRepertoara.DatumPrikazivanja)
+
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Izmeni", "Edit", new { id = Model.RepertoarID }) |
+    @Html.ActionLink("Nazad na listu", "Index")
+</p>

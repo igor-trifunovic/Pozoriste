@@ -157,6 +157,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GlumiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PredstavaController.cs" />
+    <Compile Include="Controllers\RepertoarController.cs" />
+    <Compile Include="Controllers\StavkaRepertoaraController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -260,6 +263,21 @@
     <Content Include="Views\Glumi\Details.cshtml" />
     <Content Include="Views\Glumi\Edit.cshtml" />
     <Content Include="Views\Glumi\Index.cshtml" />
+    <Content Include="Views\Predstava\Create.cshtml" />
+    <Content Include="Views\Predstava\Delete.cshtml" />
+    <Content Include="Views\Predstava\Details.cshtml" />
+    <Content Include="Views\Predstava\Edit.cshtml" />
+    <Content Include="Views\Predstava\Index.cshtml" />
+    <Content Include="Views\Repertoar\Create.cshtml" />
+    <Content Include="Views\Repertoar\Delete.cshtml" />
+    <Content Include="Views\Repertoar\Details.cshtml" />
+    <Content Include="Views\Repertoar\Edit.cshtml" />
+    <Content Include="Views\Repertoar\Index.cshtml" />
+    <Content Include="Views\StavkaRepertoara\Create.cshtml" />
+    <Content Include="Views\StavkaRepertoara\Delete.cshtml" />
+    <Content Include="Views\StavkaRepertoara\Details.cshtml" />
+    <Content Include="Views\StavkaRepertoara\Edit.cshtml" />
+    <Content Include="Views\StavkaRepertoara\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
