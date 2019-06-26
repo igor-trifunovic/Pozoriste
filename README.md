@@ -1,1 +1,1 @@
-# pozoristerepo
+Application for theatre management.
